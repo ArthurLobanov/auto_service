@@ -1,14 +1,254 @@
+$base-color: #1E69B8;
+$hover-color: #1eadec;
+$font-color: #2a3d4f;
+
 body {
   font-family: 'PT Sans', sans-serif;
+  color: $font-color;
 }
+
 .container {
   width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
 }
 
-#banner {
-  height: 500px;
+.btn {
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: $base-color;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: $hover-color;
+  }
 }
 
-//https://germany-auto.com.ua/images/about/ga_9.jpg
+header {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+
+  #header-content {
+    padding: 15px 0;
+
+    .container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      #header-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $font-color;
+
+        .address, .phone-number {
+          padding-left: 35px;
+          background-repeat: no-repeat;
+          background-size: 24px;
+          margin-right: 40px;
+          font-size: 16px;
+          line-height: 25px;
+        }
+
+        .address {
+          background-image: url("../icons/ico_location.svg");
+
+          a {
+            color: $base-color;
+          }
+        }
+
+        .phone-number {
+          background-image: url("../icons/ico_phone.svg");
+
+          a {
+            color: $font-color;
+            text-decoration: none;
+            border-bottom: 1px dashed $font-color;
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    background-color: $base-color;
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+
+      li {
+        a {
+          display: block;
+          padding: 10px 25px;
+          color: #fff;
+          text-decoration: none;
+          font-weight: 700;
+          cursor: pointer;
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          background-color: $hover-color;
+        }
+      }
+    }
+
+  }
+}
+
+main {
+  .section-heading {
+    padding-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+  }
+
+
+  #banner {
+    position: relative;
+    background-color: #f0f0f0;
+
+    #banner-info {
+      padding: 100px 0;
+
+      h1 {
+        margin: 0 0 40px 0;
+        font-size: 54px;
+      }
+
+      p {
+        margin: 0 0 40px 0;
+        font-size: 24px;
+      }
+    }
+
+    #banner-img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 40%;
+      background-image: url("https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.0.2x.20191004111603.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  #services {
+    .container {
+
+    }
+
+    #services-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5%;
+
+      .service {
+        position: relative;
+        width: 30%;
+        margin-bottom: 20px;
+
+        .service-img {
+          height: 200px;
+          background-size: cover;
+          background-position: center center;
+        }
+
+        p {
+          margin: 0;
+          line-height: 50px;
+          font-size: 20px;
+          text-align: center;
+          background-color: #f0f0f0;
+          font-weight: bold;
+          transition: all .3s;
+        }
+
+        ul {
+          position: absolute;
+          z-index: 1;
+          width: 100%;
+          padding: 0 10px 0 20px;
+          margin: 0;
+          list-style: "- ";
+          max-height: 0;
+          background-color: #f0f0f0;
+          overflow: hidden;
+          box-sizing: border-box;
+          transition: all .5s;
+        }
+
+        &:hover {
+          p {
+            background-color: $base-color;
+            color: #FFF;
+          }
+
+          ul {
+            max-height: 300px;
+            padding-bottom: 20px;
+            padding-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  #examples {
+    img {
+      width: 100%;
+    }
+
+    .slick-arrow:before {
+      color: $base-color;
+    }
+  }
+
+  #contacts {
+    #badge-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      .contact-badge {
+        h2 {
+          margin: 0 0 20px 0;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+
+          li:not(:last-child) {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+
+    #map {
+      margin-top: 30px;
+    }
+  }
+}

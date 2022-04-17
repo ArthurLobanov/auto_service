@@ -1,5 +1,6 @@
 body {
   font-family: "PT Sans", sans-serif;
+  color: #2a3d4f;
 }
 
 .container {
@@ -8,8 +9,192 @@ body {
   padding: 0 10px;
 }
 
-#banner {
-  height: 500px;
+.btn {
+  padding: 15px 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #1E69B8;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.btn:hover {
+  background-color: #1eadec;
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 1px 7px 0 rgba(0, 0, 0, 0.35);
+}
+header #header-content {
+  padding: 15px 0;
+}
+header #header-content .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header #header-content .container #header-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #2a3d4f;
+}
+header #header-content .container #header-info .address, header #header-content .container #header-info .phone-number {
+  padding-left: 35px;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  margin-right: 40px;
+  font-size: 16px;
+  line-height: 25px;
+}
+header #header-content .container #header-info .address {
+  background-image: url("../icons/ico_location.svg");
+}
+header #header-content .container #header-info .address a {
+  color: #1E69B8;
+}
+header #header-content .container #header-info .phone-number {
+  background-image: url("../icons/ico_phone.svg");
+}
+header #header-content .container #header-info .phone-number a {
+  color: #2a3d4f;
+  text-decoration: none;
+  border-bottom: 1px dashed #2a3d4f;
+}
+header nav {
+  background-color: #1E69B8;
+}
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+header nav ul li a {
+  display: block;
+  padding: 10px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+header nav ul li:hover {
+  background-color: #1eadec;
+}
+
+main .section-heading {
+  padding-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+main #banner {
+  position: relative;
+  background-color: #f0f0f0;
+}
+main #banner #banner-info {
+  padding: 100px 0;
+}
+main #banner #banner-info h1 {
+  margin: 0 0 40px 0;
+  font-size: 54px;
+}
+main #banner #banner-info p {
+  margin: 0 0 40px 0;
+  font-size: 24px;
+}
+main #banner #banner-img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  background-image: url("https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.0.2x.20191004111603.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+main #services #services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5%;
+}
+main #services #services-wrapper .service {
+  position: relative;
+  width: 30%;
+  margin-bottom: 20px;
+}
+main #services #services-wrapper .service .service-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center center;
+}
+main #services #services-wrapper .service p {
+  margin: 0;
+  line-height: 50px;
+  font-size: 20px;
+  text-align: center;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+main #services #services-wrapper .service ul {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  padding: 0 10px 0 20px;
+  margin: 0;
+  list-style: "- ";
+  max-height: 0;
+  background-color: #f0f0f0;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: all 0.5s;
+}
+main #services #services-wrapper .service:hover p {
+  background-color: #1E69B8;
+  color: #FFF;
+}
+main #services #services-wrapper .service:hover ul {
+  max-height: 300px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+main #examples img {
+  width: 100%;
+}
+main #examples .slick-arrow:before {
+  color: #1E69B8;
+}
+main #contacts #badge-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+main #contacts #badge-wrapper .contact-badge h2 {
+  margin: 0 0 20px 0;
+}
+main #contacts #badge-wrapper .contact-badge ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main #contacts #badge-wrapper .contact-badge ul li:not(:last-child) {
+  margin-bottom: 5px;
+}
+main #contacts #map {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */

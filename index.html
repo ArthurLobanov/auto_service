@@ -6,132 +6,231 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>STO</title>
+    <link rel="stylesheet" href="cont/ext/normalize.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="cont/ext/jquery-3.6.0.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="cont/ext/slick-1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="cont/ext/slick-1.8.1/slick/slick-theme.css"/>
+    <script type="text/javascript" src="cont/ext/slick-1.8.1/slick/slick.min.js"></script>
+
     <link rel="stylesheet" href="cont/styles/style.css">
-    <script src="cont/scripts/script.js"></script>
+    <script src="cont/scripts/script.js" defer></script>
 </head>
 <body>
 <header>
-    <div>
+    <div id="header-content">
         <div class="container">
-            <img src="" alt="">
-            <div class="address">
+            <img src="https://germany-auto.com.ua/images/logo.png" alt="">
+            <div id="header-info">
+                <div class="address">
+                    г. Киев, ул.Киевская 4<br>
+                    <a href="#contacts">карта проезда</a>
+                </div>
+                <div class="phone-number">
+                    <a class="phonelink" href="tel:+380961162940">СТО: +38 096 116 29 40</a><br>
+                    прием заявок 24/7
+                </div>
+                <!--                <button class="btn">перезвонить вам?</button>-->
             </div>
-            <div class="phone-number"></div>
-            <button>перезвонить вам?</button>
         </div>
     </div>
     <nav>
         <div class="container">
             <ul>
-                <li><a href="#">О нас</a></li>
-                <li><a href="#">Услуги</a></li>
-                <li><a href="#">Примеры работ</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li><a href="#about-company">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#examples">Примеры работ</a></li>
+                <li><a href="#contacts">Контакты</a></li>
             </ul>
         </div>
     </nav>
 </header>
+
 <main>
     <section id="banner">
         <div class="container">
-            <div>
+            <div id="banner-info">
                 <h1>СТО в Киеве<br>
                     Название
                 </h1>
 
                 <p>Срочный ремонт в Киеве</p>
-                <button>Перезвоните мне</button>
+                <!--                <button class="btn">Перезвоните мне</button>-->
             </div>
+        </div>
+
+        <div id="banner-img">
+
         </div>
     </section>
 
     <section id="about-company">
         <div class="container">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid asperiores corporis distinctio
-                doloremque et ex explicabo illum laboriosam laborum mollitia nisi, nulla odio officia placeat quasi
-                soluta ullam voluptatum! Odio.</p>
+            <h1 class="section-heading">Про нас</h1>
+            <p>Если Вы ищете надежный сервис по покраске и ремонту Вашего авто, тогда Вы нашли то что искали</p>
+            <p>Наш сервис предоставляет услуги по ремонту автомобилей включая все Ваши пожелания.</p>
         </div>
     </section>
 
     <section id="services">
         <div class="container">
-            <div class="service">
-                <img src="" alt="">
-                <p>Кузовные работы</p>
-                <ul class="desc">
-                    <li>Покраска</li>
-                    <li>Рихтовка</li>
-                    <li>Дефектовка</li>
-                    <li>Восстановление геометрии кузова</li>
-                    <li>Сварочные работы</li>
-                    <li>Полировка</li>
-                    <li>Ремонт пластика и бамперов</li>
-                </ul>
-            </div>
+            <h1 class="section-heading">Услуги</h1>
 
-            <div class="service">
-                <img src="" alt="">
-                <p>Тех обслуживание</p>
-                <ul class="desc">
-                    <li>Замена масла и фильтров</li>
-                    <li>Замена тормозных дисков и колодок</li>
-                    <li>Замена комплекта  ГРМ</li>
-                    <li>Замена сцепления</li>
-                    <li>Заправка кондиционера</li>
-                    <li>Замена свечей</li>
-                    <li>Замена антифриза</li>
-                    <li>Замена тормозной жидкости</li>
-                    <li>Ремонт ходовой части</li>
-                </ul>
-            </div>
+            <div id="services-wrapper">
+                <div class="service">
+                    <div class="service-img"
+                         style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                    </div>
+                    <p>Кузовные работы</p>
+                    <ul class="desc">
+                        <li>Покраска</li>
+                        <li>Рихтовка</li>
+                        <li>Дефектовка</li>
+                        <li>Восстановление геометрии кузова</li>
+                        <li>Сварочные работы</li>
+                        <li>Полировка</li>
+                        <li>Ремонт пластика и бамперов</li>
+                    </ul>
+                </div>
 
-            <div class="service">
-                <img src="" alt="">
-                <p>Слесарные работы</p>
-                <ul class="desc">
-                    <li>Ремонт двигателя</li>
-                    <li>Ремонт тормозной системы</li>
-                    <li>Ремонт топливной системы</li>
-                    <li>Ремонт выхлопной системы</li>
-                    <li>Регулировка клапанов</li>
-                </ul>
-            </div>
+                <div class="service">
+                    <div class="service-img"
+                         style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                    </div>
+                    <p>Тех обслуживание</p>
+                    <ul class="desc">
+                        <li>Замена масла и фильтров</li>
+                        <li>Замена тормозных дисков и колодок</li>
+                        <li>Замена комплекта ГРМ</li>
+                        <li>Замена сцепления</li>
+                        <li>Заправка кондиционера</li>
+                        <li>Замена свечей</li>
+                        <li>Замена антифриза</li>
+                        <li>Замена тормозной жидкости</li>
+                        <li>Ремонт ходовой части</li>
+                    </ul>
+                </div>
 
-            <div class="service">
-                <img src="" alt="">
-                <p>Диагностика</p>
-                <ul class="desc">
-                    <li>Диагностика ходовой части</li>
-                    <li>Диагностика двигателя</li>
-                    <li>Диагностика кпп</li>
-                    <li>Диагностика тормозной системы</li>
-                    <li>Компьютерная диагностика</li>
-                    <li>Диагностика авто перед покупкой</li>
-                </ul>
-            </div>
+                <div class="service">
+                    <div class="service-img"
+                         style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                    </div>
+                    <p>Слесарные работы</p>
+                    <ul class="desc">
+                        <li>Ремонт двигателя</li>
+                        <li>Ремонт тормозной системы</li>
+                        <li>Ремонт топливной системы</li>
+                        <li>Ремонт выхлопной системы</li>
+                        <li>Регулировка клапанов</li>
+                    </ul>
+                </div>
 
-            <div class="service">
-                <img src="" alt="">
-                <p>Запчасти</p>
-                <ul class="desc">
-                    <li>Запчасти под заказ</li>
-                    <li>Запчасти Б/у</li>
-                    <li>Производители и ассортимент</li>
-                </ul>
+                <div class="service">
+                    <div class="service-img"
+                         style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                    </div>
+                    <p>Диагностика</p>
+                    <ul class="desc">
+                        <li>Диагностика ходовой части</li>
+                        <li>Диагностика двигателя</li>
+                        <li>Диагностика кпп</li>
+                        <li>Диагностика тормозной системы</li>
+                        <li>Компьютерная диагностика</li>
+                        <li>Диагностика авто перед покупкой</li>
+                    </ul>
+                </div>
+
+                <div class="service">
+                    <div class="service-img"
+                         style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                    </div>
+                    <p>Запчасти</p>
+                    <ul class="desc">
+                        <li>Запчасти под заказ</li>
+                        <li>Запчасти Б/у</li>
+                        <li>Производители и ассортимент</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="examples">
-
+        <div class="container">
+            <h1 class="section-heading">Примеры работ</h1>
+            <div id="examples-carousel">
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+                <div><img
+                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
+                        alt=""></div>
+            </div>
+        </div>
     </section>
 
-    <section id="contacts"
+    <section id="contacts">
+        <div class="container">
+            <h1 class="section-heading">Контакты</h1>
+            <div id="badge-wrapper">
+                <div class="contact-badge">
+                    <h2>Адрес</h2>
+                    <ul>
+                        <li>bla bla bla</li>
+                        <li>bla bla bla</li>
+                        <li>bla bla bla</li>
+                    </ul>
+                </div>
 
-    ></section>
+                <div class="contact-badge">
+                    <h2>Телефон</h2>
+                    <ul>
+                        <li>234 23 43</li>
+                        <li>(043) 344 43 43</li>
+                    </ul>
+                </div>
+
+                <div class="contact-badge">
+                    <h2>Почта</h2>
+                    <ul>
+                        <li>blablabla@gmail.com</li>
+                        <li>blablabla@gmail.com</li>
+                    </ul>
+                </div>
+
+                <div class="contact-badge">
+                    <h2>График работы</h2>
+                    <ul>
+                        <li>пн.-пт. с 00-00 до 00-00</li>
+                        <li>сб.-вс. с 00-00 до 00-00</li>
+                    </ul>
+                </div>
+            </div>
+            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d20309.075323923767!2d30.4721233!3d50.4851493!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cde96c5f81af%3A0x112259d9019b4231!2z0JrQuNGA0LjQu9C70L7QstGB0LrQsNGPINGG0LXRgNC60L7QstGM!5e0!3m2!1sru!2sua!4v1650231930777!5m2!1sru!2sua"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
 </main>
 <footer>
 
