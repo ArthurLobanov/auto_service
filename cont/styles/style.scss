@@ -113,15 +113,14 @@ header {
   }
 }
 
+.section-heading {
+  padding-top: 50px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
 main {
-  .section-heading {
-    padding-top: 50px;
-    margin-bottom: 30px;
-    text-align: center;
-    font-size: 30px;
-  }
-
-
   #banner {
     position: relative;
     background-color: #f0f0f0;
@@ -167,6 +166,12 @@ main {
         position: relative;
         width: 30%;
         margin-bottom: 20px;
+        transition: transform .3s;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
 
         .service-img {
           height: 200px;
@@ -184,7 +189,7 @@ main {
           transition: all .3s;
         }
 
-        ul {
+        /*ul {
           position: absolute;
           z-index: 1;
           width: 100%;
@@ -196,19 +201,20 @@ main {
           overflow: hidden;
           box-sizing: border-box;
           transition: all .5s;
-        }
+        }*/
 
         &:hover {
+          transform: scale(1.05);
           p {
             background-color: $base-color;
             color: #FFF;
           }
 
-          ul {
+          /*ul {
             max-height: 300px;
             padding-bottom: 20px;
             padding-top: 20px;
-          }
+          }*/
         }
       }
     }
@@ -227,6 +233,10 @@ main {
     }
   }
 
+
+}
+
+footer {
   #contacts {
     #badge-wrapper {
       display: flex;
@@ -251,6 +261,7 @@ main {
     }
 
     #map {
+      display: block;
       margin-top: 30px;
     }
   }

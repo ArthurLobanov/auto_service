@@ -93,12 +93,13 @@ header nav ul li:hover {
   background-color: #1eadec;
 }
 
-main .section-heading {
+.section-heading {
   padding-top: 50px;
   margin-bottom: 30px;
   text-align: center;
   font-size: 30px;
 }
+
 main #banner {
   position: relative;
   background-color: #f0f0f0;
@@ -134,6 +135,24 @@ main #services #services-wrapper .service {
   position: relative;
   width: 30%;
   margin-bottom: 20px;
+  transition: transform 0.3s;
+  /*ul {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    padding: 0 10px 0 20px;
+    margin: 0;
+    list-style: "- ";
+    max-height: 0;
+    background-color: #f0f0f0;
+    overflow: hidden;
+    box-sizing: border-box;
+    transition: all .5s;
+  }*/
+}
+main #services #services-wrapper .service a {
+  text-decoration: none;
+  color: inherit;
 }
 main #services #services-wrapper .service .service-img {
   height: 200px;
@@ -149,27 +168,17 @@ main #services #services-wrapper .service p {
   font-weight: bold;
   transition: all 0.3s;
 }
-main #services #services-wrapper .service ul {
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  padding: 0 10px 0 20px;
-  margin: 0;
-  list-style: "- ";
-  max-height: 0;
-  background-color: #f0f0f0;
-  overflow: hidden;
-  box-sizing: border-box;
-  transition: all 0.5s;
+main #services #services-wrapper .service:hover {
+  transform: scale(1.05);
+  /*ul {
+    max-height: 300px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }*/
 }
 main #services #services-wrapper .service:hover p {
   background-color: #1E69B8;
   color: #FFF;
-}
-main #services #services-wrapper .service:hover ul {
-  max-height: 300px;
-  padding-bottom: 20px;
-  padding-top: 20px;
 }
 main #examples img {
   width: 100%;
@@ -177,23 +186,25 @@ main #examples img {
 main #examples .slick-arrow:before {
   color: #1E69B8;
 }
-main #contacts #badge-wrapper {
+
+footer #contacts #badge-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-main #contacts #badge-wrapper .contact-badge h2 {
+footer #contacts #badge-wrapper .contact-badge h2 {
   margin: 0 0 20px 0;
 }
-main #contacts #badge-wrapper .contact-badge ul {
+footer #contacts #badge-wrapper .contact-badge ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-main #contacts #badge-wrapper .contact-badge ul li:not(:last-child) {
+footer #contacts #badge-wrapper .contact-badge ul li:not(:last-child) {
   margin-bottom: 5px;
 }
-main #contacts #map {
+footer #contacts #map {
+  display: block;
   margin-top: 30px;
 }
 
