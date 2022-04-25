@@ -1,12 +1,14 @@
 body {
   font-family: "PT Sans", sans-serif;
   color: #2a3d4f;
+  min-width: 1100px;
 }
 
 .container {
   width: 1100px;
   margin: 0 auto;
   padding: 0 10px;
+  box-sizing: border-box;
 }
 
 .btn {
@@ -41,6 +43,10 @@ header #header-content .container {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+header #header-content .container .logo {
+  margin: 0;
+  color: #1E69B8;
 }
 header #header-content .container #header-info {
   display: flex;
@@ -206,6 +212,22 @@ footer #contacts #badge-wrapper .contact-badge ul li:not(:last-child) {
 footer #contacts #map {
   display: block;
   margin-top: 30px;
+}
+
+#locksmith-services {
+  display: flex;
+  flex-wrap: wrap;
+}
+#locksmith-services .locksmith-service {
+  padding: 0 10px;
+  width: 25%;
+  box-sizing: border-box;
+}
+#locksmith-services .locksmith-service p {
+  font-weight: bold;
+}
+#locksmith-services .locksmith-service ul {
+  padding: 0 0 0 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
