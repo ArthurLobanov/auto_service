@@ -2,8 +2,11 @@ $base-color: #1E69B8;
 $hover-color: #1eadec;
 $font-color: #2a3d4f;
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 body {
-  font-family: 'PT Sans', sans-serif;
+  font-family: 'Mulish', sans-serif;
+  //font-family: 'Open Sans', sans-serif;
   color: $font-color;
   min-width: 1100px;
 }
@@ -19,8 +22,8 @@ body {
   padding: 15px 20px;
   font-size: 14px;
   line-height: 20px;
-  background-color: $base-color;
-  color: #fff;
+  background-color: #fffe00;
+  color: $font-color;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -31,7 +34,7 @@ body {
   transition: background-color .3s;
 
   &:hover {
-    background-color: $hover-color;
+    background-color: #a2fd02;
   }
 }
 
@@ -51,7 +54,13 @@ header {
 
       .logo {
         margin: 0;
-        color: $base-color;
+
+        a {
+          text-decoration: underline;
+          &, &:hover, &:active, &:visited {
+            color: $base-color;
+          }
+        }
       }
 
       #header-info {
@@ -102,6 +111,8 @@ header {
       flex-direction: row;
 
       li {
+        transition: background-color .3s;
+
         a {
           display: block;
           padding: 10px 25px;
@@ -126,6 +137,7 @@ header {
   margin-bottom: 30px;
   text-align: center;
   font-size: 30px;
+  text-decoration: underline;
 }
 
 main {
@@ -153,10 +165,23 @@ main {
       top: 0;
       height: 100%;
       width: 40%;
-      background-image: url("https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.0.2x.20191004111603.jpeg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
+      //background-image: url("https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.0.2x.20191004111603.jpeg");
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      //background-position: center;
+      overflow: hidden;
+
+      video {
+        position: absolute;
+        width: 100%;
+        transform: translateY(-30%);
+      }
+    }
+  }
+
+  #about-company {
+    p {
+      text-align: center;
     }
   }
 
@@ -197,20 +222,6 @@ main {
           transition: all .3s;
         }
 
-        /*ul {
-          position: absolute;
-          z-index: 1;
-          width: 100%;
-          padding: 0 10px 0 20px;
-          margin: 0;
-          list-style: "- ";
-          max-height: 0;
-          background-color: #f0f0f0;
-          overflow: hidden;
-          box-sizing: border-box;
-          transition: all .5s;
-        }*/
-
         &:hover {
           transform: scale(1.05);
 
@@ -218,12 +229,6 @@ main {
             background-color: $base-color;
             color: #FFF;
           }
-
-          /*ul {
-            max-height: 300px;
-            padding-bottom: 20px;
-            padding-top: 20px;
-          }*/
         }
       }
     }
@@ -292,5 +297,42 @@ footer {
     ul {
       padding: 0 0 0 20px;
     }
+  }
+}
+
+
+#form-popup {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.4s;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 40px;
+    background-color: white;
+
+    input {
+      width: 300px;
+      padding: 0 10px;
+      line-height: 40px;
+      font-size: 20px;
+    }
+  }
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
   }
 }

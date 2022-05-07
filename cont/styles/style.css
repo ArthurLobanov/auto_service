@@ -1,5 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;700&display=swap");
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "Mulish", sans-serif;
   color: #2a3d4f;
   min-width: 1100px;
 }
@@ -15,8 +16,8 @@ body {
   padding: 15px 20px;
   font-size: 14px;
   line-height: 20px;
-  background-color: #1E69B8;
-  color: #fff;
+  background-color: #fffe00;
+  color: #2a3d4f;
   font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
@@ -27,7 +28,7 @@ body {
   transition: background-color 0.3s;
 }
 .btn:hover {
-  background-color: #1eadec;
+  background-color: #a2fd02;
 }
 
 header {
@@ -46,6 +47,11 @@ header #header-content .container {
 }
 header #header-content .container .logo {
   margin: 0;
+}
+header #header-content .container .logo a {
+  text-decoration: underline;
+}
+header #header-content .container .logo a, header #header-content .container .logo a:hover, header #header-content .container .logo a:active, header #header-content .container .logo a:visited {
   color: #1E69B8;
 }
 header #header-content .container #header-info {
@@ -86,6 +92,9 @@ header nav ul {
   display: flex;
   flex-direction: row;
 }
+header nav ul li {
+  transition: background-color 0.3s;
+}
 header nav ul li a {
   display: block;
   padding: 10px 25px;
@@ -104,6 +113,7 @@ header nav ul li:hover {
   margin-bottom: 30px;
   text-align: center;
   font-size: 30px;
+  text-decoration: underline;
 }
 
 main #banner {
@@ -127,10 +137,15 @@ main #banner #banner-img {
   top: 0;
   height: 100%;
   width: 40%;
-  background-image: url("https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile/image.MQ6.0.2x.20191004111603.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+main #banner #banner-img video {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-30%);
+}
+main #about-company p {
+  text-align: center;
 }
 main #services #services-wrapper {
   display: flex;
@@ -142,19 +157,6 @@ main #services #services-wrapper .service {
   width: 30%;
   margin-bottom: 20px;
   transition: transform 0.3s;
-  /*ul {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    padding: 0 10px 0 20px;
-    margin: 0;
-    list-style: "- ";
-    max-height: 0;
-    background-color: #f0f0f0;
-    overflow: hidden;
-    box-sizing: border-box;
-    transition: all .5s;
-  }*/
 }
 main #services #services-wrapper .service a {
   text-decoration: none;
@@ -176,11 +178,6 @@ main #services #services-wrapper .service p {
 }
 main #services #services-wrapper .service:hover {
   transform: scale(1.05);
-  /*ul {
-    max-height: 300px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }*/
 }
 main #services #services-wrapper .service:hover p {
   background-color: #1E69B8;
@@ -228,6 +225,39 @@ footer #contacts #map {
 }
 #locksmith-services .locksmith-service ul {
   padding: 0 0 0 20px;
+}
+
+#form-popup {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+#form-popup form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 40px;
+  background-color: white;
+}
+#form-popup form input {
+  width: 300px;
+  padding: 0 10px;
+  line-height: 40px;
+  font-size: 20px;
+}
+#form-popup.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

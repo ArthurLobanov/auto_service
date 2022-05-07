@@ -8,11 +8,9 @@
     <title>STO</title>
     <link rel="stylesheet" href="cont/ext/normalize.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="cont/ext/jquery-3.6.0.js"></script>
+    <script src="cont/ext/jquery.inputmask.js"></script>
 
     <link rel="stylesheet" type="text/css" href="cont/ext/slick-1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="cont/ext/slick-1.8.1/slick/slick-theme.css"/>
@@ -20,12 +18,13 @@
 
     <link rel="stylesheet" href="cont/styles/style.css">
     <script src="cont/scripts/script.js" defer></script>
+    <script src="cont/ext/smooth-anchor-scroll.js" defer></script>
 </head>
 <body>
 <header>
     <div id="header-content">
         <div class="container">
-            <h1 class="logo">Autoidea</h1>
+            <h1 class="logo"><a href="index.html">Autoidea</a></h1>
             <div id="header-info">
                 <div class="address">
                     г. Киев, ул. Канальная 1 (Позняки)<br>
@@ -35,7 +34,7 @@
                     <a class="phonelink" href="tel:+380961162940">СТО: +38 097 865 39 26</a><br>
                     прием заявок 24/7
                 </div>
-                <!--                <button class="btn">перезвонить вам?</button>-->
+                <button class="btn show-popup">перезвонить вам?</button>
             </div>
         </div>
     </div>
@@ -56,23 +55,23 @@
         <div class="container">
             <div id="banner-info">
                 <h1>СТО в Киеве<br>
-                    Название
+                    Autoidea
                 </h1>
 
-                <p>Срочный ремонт в Киеве</p>
-                <!--                <button class="btn">Перезвоните мне</button>-->
+                <p>Полный комплекс кузовных работ</p>
+                <button class="btn show-popup">Перезвоните мне</button>
             </div>
         </div>
 
         <div id="banner-img">
-
+            <video src="cont/video/IMG_4614.mp4" muted loop autoplay></video>
         </div>
     </section>
 
     <section id="about-company">
         <div class="container">
             <h1 class="section-heading">О нас</h1>
-            <p>Если Вы ищете надежный сервис по покраске и ремонту Вашего авто, тогда Вы нашли то что искали</p>
+            <p>Если Вы ищете надежный сервис по покраске и ремонту Вашего авто, тогда Вы нашли то что искали!</p>
             <p>Наш сервис предоставляет услуги по ремонту автомобилей включая все Ваши пожелания.</p>
         </div>
     </section>
@@ -85,85 +84,45 @@
                 <div class="service">
                     <a href="bodywork.html">
                         <div class="service-img"
-                             style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                             style="background-image: url('cont/img/remontkuzova.jpg')">
                         </div>
                         <p>Кузовные работы</p>
-<!--                        <ul class="desc">-->
-<!--                            <li>Покраска</li>-->
-<!--                            <li>Рихтовка</li>-->
-<!--                            <li>Дефектовка</li>-->
-<!--                            <li>Восстановление геометрии кузова</li>-->
-<!--                            <li>Сварочные работы</li>-->
-<!--                            <li>Полировка</li>-->
-<!--                            <li>Ремонт пластика и бамперов</li>-->
-<!--                        </ul>-->
                     </a>
                 </div>
 
                 <div class="service">
                     <a href="maintenance.html">
                         <div class="service-img"
-                             style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                             style="background-image: url('cont/img/techobsl.jpg')">
                         </div>
                         <p>Тех обслуживание</p>
-<!--                        <ul class="desc">-->
-<!--                            <li>Замена масла и фильтров</li>-->
-<!--                            <li>Замена тормозных дисков и колодок</li>-->
-<!--                            <li>Замена комплекта ГРМ</li>-->
-<!--                            <li>Замена сцепления</li>-->
-<!--                            <li>Заправка кондиционера</li>-->
-<!--                            <li>Замена свечей</li>-->
-<!--                            <li>Замена антифриза</li>-->
-<!--                            <li>Замена тормозной жидкости</li>-->
-<!--                            <li>Ремонт ходовой части</li>-->
-<!--                        </ul>-->
                     </a>
                 </div>
 
                 <div class="service">
                     <a href="locksmith.html">
                         <div class="service-img"
-                             style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                             style="background-image: url('cont/img/slesarka.jpg')">
                         </div>
                         <p>Слесарные работы</p>
-<!--                        <ul class="desc">-->
-<!--                            <li>Ремонт двигателя</li>-->
-<!--                            <li>Ремонт тормозной системы</li>-->
-<!--                            <li>Ремонт топливной системы</li>-->
-<!--                            <li>Ремонт выхлопной системы</li>-->
-<!--                            <li>Регулировка клапанов</li>-->
-<!--                        </ul>-->
                     </a>
                 </div>
 
                 <div class="service">
                     <a href="diagnostics.html">
                         <div class="service-img"
-                             style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                             style="background-image: url('cont/img/diagnostika.jpg')">
                         </div>
                         <p>Диагностика</p>
-<!--                        <ul class="desc">-->
-<!--                            <li>Диагностика ходовой части</li>-->
-<!--                            <li>Диагностика двигателя</li>-->
-<!--                            <li>Диагностика кпп</li>-->
-<!--                            <li>Диагностика тормозной системы</li>-->
-<!--                            <li>Компьютерная диагностика</li>-->
-<!--                            <li>Диагностика авто перед покупкой</li>-->
-<!--                        </ul>-->
                     </a>
                 </div>
 
                 <div class="service">
                     <a href="parts.html">
                         <div class="service-img"
-                             style="background-image: url('https://germany-auto.com.ua/images/about/ga_5.jpg')">
+                             style="background-image: url('cont/img/zapchasti.jpg')">
                         </div>
                         <p>Запчасти</p>
-<!--                        <ul class="desc">-->
-<!--                            <li>Запчасти под заказ</li>-->
-<!--                            <li>Запчасти Б/у</li>-->
-<!--                            <li>Производители и ассортимент</li>-->
-<!--                        </ul>-->
                     </a>
                 </div>
             </div>
@@ -174,27 +133,10 @@
         <div class="container">
             <h1 class="section-heading">Примеры работ</h1>
             <div id="examples-carousel">
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
-                <div><img
-                        src="https://www.mercedes-benz.ru/passengercars/mercedes-benz-cars/models/g-class/suv-w463/amg/highlights/_jcr_content/contentgallerycontainer/par/contentgallery/par/contentgallerytile_2105043528/image.MQ6.0.2x.20191004111603.jpeg"
-                        alt=""></div>
+                <div><img src="cont/img/1.jpg" alt=""></div>
+                <div><img src="cont/img/2.jpg" alt=""></div>
+                <div><img src="cont/img/3.jpg" alt=""></div>
+                <div><img src="cont/img/4.jpg" alt=""></div>
             </div>
         </div>
     </section>
@@ -236,7 +178,18 @@
                     </ul>
                 </div>
             </div>
-            <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.289881853197!2d30.596525415730174!3d50.41707047947076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c59cd9449b4f%3A0x582f585084994114!2z0YPQuy4g0JrQsNC90LDQu9GM0L3QsNGPLCAxLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1650298012049!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe id="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.289881853197!2d30.596525415730174!3d50.41707047947076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c59cd9449b4f%3A0x582f585084994114!2z0YPQuy4g0JrQsNC90LDQu9GM0L3QsNGPLCAxLCDQmtC40LXQsiwgMDIwMDA!5e0!3m2!1sru!2sua!4v1650298012049!5m2!1sru!2sua"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div id="form-popup">
+                <form action="#">
+                    <input id="phoneInput" type="tel" name="phone" placeholder="Номер телефона" required>
+                    <input id="nameInput" type="text" name="name" placeholder="Имя" required>
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+            </div>
         </div>
     </section>
 </footer>
