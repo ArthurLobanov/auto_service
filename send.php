@@ -9,7 +9,7 @@ if ((isset($_POST['name']) && $_POST['name'] != "") && (isset($_POST['phone']) &
                     </head>
                     <body>
                         <p>Имя: ' . $_POST['name'] . '</p>
-                        <p>Телефон: ' . $_POST['phone'] . '</p>
+                        <p>Телефон: <a href="tel:' . $_POST['phone'] . '">' . $_POST['phone'] . '</a></p>
                     </body>
                 </html>';
     $headers = "Content-type: text/html; charset=utf-8 \r\n";

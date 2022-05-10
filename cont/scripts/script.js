@@ -5,13 +5,17 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3000,
     touchMove: true,
+    adaptiveHeight: true,
   })
 
-  let showPopupBtn = $('.show-popup')
-  let formPopup = $('#form-popup')
-  let form = formPopup.find('form')
-  let inputs = form.find('input')
-  let phoneInput = $('#phoneInput')
+  const showPopupBtn = $('.show-popup')
+  const formPopup = $('#form-popup')
+  const form = formPopup.find('form')
+  const inputs = form.find('input')
+  const phoneInput = $('#phoneInput')
+  const navBlock = $('header nav')
+  const menu = $('header nav ul')
+  const menuItem = $('header nav ul li')
 
   phoneInput.inputmask('+38(099)-999-99-99')
 
@@ -19,6 +23,37 @@ $(document).ready(function () {
   formPopup.click(hidePopup)
   form.click((event) => {
     event.stopPropagation()
+  })
+
+
+  const mails = 'lobanovartur@gmail.com, autoideakiev@gmail.com'
+  form.submit(function (event) {
+    event.preventDefault()
+    let to = '&to=' + mails
+    let form_data = $(this).serialize() + to
+    console.log(form_data)
+    $.ajax({
+      type: 'POST',
+      url: 'send.php',
+      data: form_data,
+      success: function () {
+        hidePopup()
+      },
+    })
+  })
+
+  navBlock.click((e) => {
+    e.stopPropagation()
+    showMenu()
+  })
+
+  $(window).click(() => {
+    hideMenu()
+  })
+
+  menuItem.click((e) => {
+    e.stopPropagation()
+    hideMenu()
   })
 
 
@@ -34,21 +69,13 @@ $(document).ready(function () {
     })
   }
 
-  let mail = 'lobanovartur@gmail.com, autoideakiev@gmail.com'
-  form.submit(function (event) {
-    event.preventDefault()
-    let to = '&to=' + mail
-    let form_data = $(this).serialize() + to
-    console.log(form_data)
-    $.ajax({
-      type: 'POST',
-      url: 'send.php',
-      data: form_data,
-      success: function () {
-        hidePopup()
-      },
-    })
-  })
+  function showMenu() {
+    menu.addClass('active')
+  }
+
+  function hideMenu() {
+    menu.removeClass('active')
+  }
 })
 
 
