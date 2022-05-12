@@ -5,7 +5,9 @@ $(document).ready(function () {
 
   navBlock.click((e) => {
     e.stopPropagation()
-    showMenu()
+    if (window.innerWidth <= 600) {
+      showMenu()
+    }
   })
 
   $(window).click(() => {
@@ -14,7 +16,9 @@ $(document).ready(function () {
 
   menuItem.click((e) => {
     e.stopPropagation()
-    hideMenu()
+    if (window.innerWidth <= 600) {
+      hideMenu()
+    }
   })
 
   function showMenu() {

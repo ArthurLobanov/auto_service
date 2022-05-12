@@ -6,6 +6,7 @@ $(document).ready(function () {
     autoplaySpeed: 3000,
     touchMove: true,
     adaptiveHeight: true,
+    pauseOnHover: false
   })
 
   const showPopupBtn = $('.show-popup')
@@ -13,9 +14,6 @@ $(document).ready(function () {
   const form = formPopup.find('form')
   const inputs = form.find('input')
   const phoneInput = $('#phoneInput')
-  const navBlock = $('header nav')
-  const menu = $('header nav ul')
-  const menuItem = $('header nav ul li')
 
   phoneInput.inputmask('+38(099)-999-99-99')
 
@@ -42,21 +40,6 @@ $(document).ready(function () {
     })
   })
 
-  navBlock.click((e) => {
-    e.stopPropagation()
-    showMenu()
-  })
-
-  $(window).click(() => {
-    hideMenu()
-  })
-
-  menuItem.click((e) => {
-    e.stopPropagation()
-    hideMenu()
-  })
-
-
   function showPopup() {
     formPopup.addClass('visible')
     phoneInput.focus()
@@ -67,14 +50,6 @@ $(document).ready(function () {
     formPopup.one('transitionend', () => {
       inputs.val('')
     })
-  }
-
-  function showMenu() {
-    menu.addClass('active')
-  }
-
-  function hideMenu() {
-    menu.removeClass('active')
   }
 })
 
