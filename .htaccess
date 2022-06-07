@@ -1,0 +1,25 @@
+Options +SymLinksIfOwnerMatch
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www.autoidea.com.ua [NC]
+RewriteRule ^(.*) https://autoidea.com.ua/$1 [R=301,L]
+RewriteRule ^index.html$ / [R=301,L]
+
+ErrorDocument	404	https://autoidea.com.ua/404.html
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType application/javascript "access plus 1 week"
+  ExpiresByType text/javascript "access plus 1 week"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType image/gif "access plus 1 week"
+  ExpiresByType image/jpeg "access plus 1 week"
+  ExpiresByType image/png "access plus 1 week"
+  ExpiresByType image/jpg "access plus 1 week"
+  ExpiresByType image/x-icon "access plus 1 week"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|xml|gz)$">
+    Header append Vary: Accept-Encoding
+  </FilesMatch>
+</IfModule>
